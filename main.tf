@@ -38,12 +38,12 @@ EOF
 }
 
 resource "yandex_function" "database_connector" {
-  name               = "apigw-dynamodb-connector"
+  name               = "apigw-dynamodb-connector2"
   user_hash          = uuid()
   folder_id          = var.folder_id
   description        = "Function for integration API Gateway with Yandex Database throw DynamoDB API"
   runtime            = "nodejs16-preview"
-  entrypoint         = "apigw-dynamodb-connector.handler"
+  entrypoint         = "apigw-dynamodb-connector2.handler"
   memory             = 128
   execution_timeout  = 300
   package {
